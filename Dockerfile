@@ -16,10 +16,10 @@ RUN apt-get update && apt-get clean \
  && apt-get autoremove \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
  
-RUN cd /opt && wget http://bit.do/kibi-4-5-3-linux-x64-demo-lite-zip \
- && unzip kibi-4-5-3-linux-x64-demo-lite-zip \
- && rm -rf /opt/kibi-4-5-3-linux-x64-demo-lite-zip \
- && mv kibi-4.5.3-linux-x64-demo-lite kibi \
+RUN cd /opt && wget http://bit.do/kibi-4-5-3-linux-x64-demo-full-zip \
+ && unzip kibi-4-5-3-linux-x64-demo-full-zip \
+ && rm -rf /opt/kibi-4-5-3-linux-x64-demo-full-zip \
+ && mv kibi-4.5.3-linux-x64-demo-full kibi \
  && chown -R kibi:kibi /opt/kibi \
  && mv /opt/kibi/elasticsearch/data/kibi-demo /var/lib/elasticsearch/ \
  && chown -R elasticsearch:elasticsearch /var/lib/elasticsearch/ \
